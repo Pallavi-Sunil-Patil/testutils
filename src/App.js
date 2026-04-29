@@ -3,6 +3,7 @@ import './App.css';
 import Alert from './Components/Alert';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 import Testform from './Components/Testform';
 import React, { useState } from 'react';
 
@@ -30,13 +31,13 @@ function App() {
     if (mode === 'light'){
       setMode('dark')
       document.body.style.backgroundColor = "black";
-      setShowAlert('Dark mode anabled', "success")
+      // setShowAlert('Dark mode anabled', "success")
       document.title = 'TextUlits - dark';
     }
     else {
       setMode('light')
        document.body.style.backgroundColor = "white";
-       setShowAlert('Light mode anabled', "success");
+      //  setShowAlert('Light mode anabled', "success");
        document.title = 'TextUlits - Light';
     }
   }
@@ -48,17 +49,18 @@ function App() {
       <div className="container">
       
       <Routes>
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About mode={mode} 
+            setShowAlert={setShowAlert} />} />
         <Route path="/" element={
           <Testform 
-            heading="Fill the Form" 
+            heading="Enter the text to perform below operations" 
             mode={mode} 
             setShowAlert={setShowAlert}
           />
         } />
       </Routes>
-   
       </div> 
+      <Footer cpytext="© 2026 Copyright" mode={mode}/>
       </Router>
     </>
   );

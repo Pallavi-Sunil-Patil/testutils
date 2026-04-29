@@ -45,10 +45,10 @@ export default function Navbar(props) {
 
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className={`nav-link active text-${textColor}`} aria-current="page" to="/">Home</Link>
+                <Link className={`nav-link text-${textColor}`} aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link active text-${textColor}`} to="/about">{props.aboutText}</Link>
+                <Link className={`nav-link text-${textColor}`} to="/about">{props.aboutText}</Link>
               </li>
             </ul>
 
