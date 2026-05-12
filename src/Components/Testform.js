@@ -88,8 +88,8 @@ const handleCopyText = () => {
     </form>
     <div className="container my-4 pb-5" style={{color:props.mode==='light'?'black':'white'}}>
       <h3>Your text summery</h3>
-      <p>{text.split(/\s+/).filter((element)=> {return element.length!=0}).length} words {text.length} characters</p>
-      <p>{0.008 * text.split(" ").filter((element)=> {return element.length!=0}).length} minutes read</p>
+      <p>{text.split(/\s+/).filter((element)=> {return element.length!==0}).length} words {text.length} characters</p>
+      <p>{0.008 * text.split(" ").filter((element)=> {return element.length!==0}).length} minutes read</p>
       <h4>Preview</h4>
       <div>{text.length>0?text: "Enter text in above textArea to preview here"}</div>
     </div>
