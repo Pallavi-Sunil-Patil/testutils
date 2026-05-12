@@ -26,12 +26,20 @@ export default function Navbar(props) {
   return (
     <div>
       <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
-        <div className="container-fluid">
+        <div className="container-fluid position-relative">
 
-          <Link className={`navbar-brand text-${textColor}`} to="/">
+          <Link className={`navbar-brand m-0 text-${textColor}`} to="/">
             {props.title2}
           </Link>
-
+          {/* Light/Dark toggle */}
+            <div className="form-check form-check-mobile form-switch">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                onClick={props.toggleMode}
+                id="flexSwitchCheckDefault"
+              />
+            </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
@@ -53,7 +61,7 @@ export default function Navbar(props) {
             </ul>
 
             {/* Light/Dark toggle */}
-            <div className="form-check form-switch me-3">
+            <div className="form-check form-check-desk form-switch me-3">
               <input
                 className="form-check-input"
                 type="checkbox"
@@ -63,7 +71,7 @@ export default function Navbar(props) {
             </div>
 
             {/* Radio buttons */}
-            <div className="d-flex">
+            <div className="d-flex radio-btn-theme">
               <div className="form-check p-0 me-4">
                 <input style={{ backgroundColor: "red", border: "2px solid white", fontSize: "20px" }}
                   className="form-check-input"

@@ -44,7 +44,7 @@ function App() {
   return (
     <>
       <Router>
-      <Navbar title2="TextUtils2" aboutText="About more us" mode={mode} setMode={setMode} toggleMode={toggleMode}/>
+      <Navbar title2="TextUtils" aboutText="About more us" mode={mode} setMode={setMode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       <div className="container">
       

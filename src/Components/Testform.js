@@ -61,7 +61,7 @@ const handleCopyText = () => {
           onChange={handleOnChange} // ✅ updates state
         ></textarea>
       </div>
-
+      <div class="text-frm-btn">
       <button disabled={text.trim().length === 0} type="button" className="btn btn-primary my-3" onClick={handleUpperCase} >
         Convert to UpperCase
       </button>
@@ -85,6 +85,7 @@ const handleCopyText = () => {
       <button disabled={text.trim().length === 0} type="button" className="btn btn-primary my-3 mx-4"  onClick={handleCopyText} >
         Copy text
       </button>
+      </div>
     </form>
     <div className="container my-4 pb-5" style={{color:props.mode==='light'?'black':'white'}}>
       <h3>Your text summery</h3>

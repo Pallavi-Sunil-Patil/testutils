@@ -1,3 +1,37 @@
 .accordion-button::after{
     content: unset !important;
 }
+.form-check-mobile{
+    display: none !important;
+}
+.form-check-desk{
+    padding: 0px !important;
+}
+@media (max-width:1200px){
+    .container, .container-fluid{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .text-frm-btn button {
+    margin: 0px !important;
+    line-height: 1.2em;
+}
+.text-frm-btn {
+    display: grid;
+    gap: 10px;
+    padding-top: 20px;
+    grid-template-columns: repeat(3,1fr);
+}
+.radio-btn-theme{
+    display: none !important;
+}
+.form-check-mobile{
+    display: block !important;
+    padding: 0px !important;
+    position: absolute;
+    right: 87px;
+}
+.form-check-desk{
+    display: none !important;
+}
+}
