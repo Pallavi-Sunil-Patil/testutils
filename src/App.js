@@ -53,7 +53,7 @@ function App() {
             setShowAlert={setShowAlert} />} />
         <Route path="/" element={
           <Testform 
-            heading="Enter the text to perform below operation" 
+            heading="Enter the text to perform below operations" 
             mode={mode} 
             setShowAlert={setShowAlert}
           />
